@@ -27,7 +27,7 @@ def calc():
     length = int(form.input_length.value())
 
     # в формуле учтен коэф. 1,2, учитывающий заполнение клеевым составом неучтенных пустот (резба, фаска, дефекты отверстий и др.)
-    volume = math.ceil(math.pi * length * 0.001 * 1.2 * ((diametr + 5) ** 2 - diametr ** 2) / 4)
+    volume = math.ceil(math.pi * length * 0.001 * ((diametr + 5) ** 2 - diametr ** 2) / 4 * 1.2)
     total = volume * amount
     form.total_1.setText(str(total))
 
@@ -50,6 +50,7 @@ app.exec_()
 1. Официальная документация:    https://doc.qt.io/qt-5/qtwidgets-module.html    
 2. Уроки 1-8 (Олег Шпагин):   https://www.youtube.com/watch?v=eTL25yiNpG4&list=PLxiU3nwEQ4PFYw-kaE5kAT17AtxhvLM71
 3. Урок по созданию генератора паролей (IT-куб ОНТ):   https://www.youtube.com/watch?v=pMNrxE1xAfw
+4. Создание *.exe:  https://www.youtube.com/watch?v=K_le5u6k8gM&list=PLxiU3nwEQ4PFYw-kaE5kAT17AtxhvLM71&index=7
 
 Форумы:  
 https://ru.stackoverflow.com/questions/1188420/%d0%9a%d0%b0%d0%ba-%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d1%8c%d0%bd%d0%be-%d0%bf%d0%b5%d1%80%d0%b5%d0%b4%d0%b0%d1%82%d1%8c-%d0%be%d0%b1%d1%8a%d0%b5%d0%ba%d1%82-pyqt5-%d0%b8%d0%b7-%d0%be%d0%b4%d0%bd%d0%be%d0%b3%d0%be-%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b0-%d0%b2-%d0%b4%d1%80%d1%83%d0%b3%d0%be%d0%b9?rq=1
